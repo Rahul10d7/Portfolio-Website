@@ -552,3 +552,20 @@ section:not(#hero) {
     }
 }
 
+@media (max-width: 600px) {
+  #hero {
+    padding: 80px 0;       /* less vertical space on phones */
+  }
+
+  #hero h1 {
+    font-size: 28px;       /* smaller heading */
+  }
+
+  #hero .typewriter h2 {
+    font-size: 18px;       /* adjust subheading */
+  }
+
+  #hero p {
+    font-size: 14px;
+  }
+}
