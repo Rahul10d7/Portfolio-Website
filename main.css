@@ -184,14 +184,6 @@ section:hover {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
-.typewriter h2 {
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: .15em;
-    animation: typing 3.5s steps(40, end);
-    width: fit-content; /* Prevent cursor from moving to the end of the page */
-}
 
 @keyframes typing {
     from { width: 0 }
@@ -543,12 +535,39 @@ section:not(#hero) {
     }
 }
 
+.typewriter h2 {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(40, end);
+    width: fit-content; /* Prevent cursor from moving to the end of the page */
+}
 
+/* cursor (desktop + mobile) */
+.typewriter .cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    margin-left: 4px;
+    animation: blink 0.7s steps(1, end) infinite;
+}
+
+/* Phones: no typing effect, keep cursor */
 @media (max-width: 600px) {
   .typewriter h2 {
-    white-space: normal;   /* allow wrapping */
-    width: 90%;            /* keep inside screen */
-    font-size: 18px;
-    line-height: 1.3;
+    overflow: visible;
+    white-space: normal;
+    width: auto;
+    animation: none;        /* stop typing, text shows instantly */
   }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
 }
