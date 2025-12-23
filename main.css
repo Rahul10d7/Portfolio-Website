@@ -256,15 +256,6 @@ section:not(#hero) {
     background-color: #e26b0a;
 }
 
-.typewriter h2 {
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: .15em;
-    animation: typing 3.5s steps(40, end) infinite, blink-caret .75s step-end infinite;
-}
-
-
 #contact {
     text-align: center;
 }
@@ -552,20 +543,12 @@ section:not(#hero) {
     }
 }
 
+
 @media (max-width: 600px) {
-  #hero {
-    padding: 80px 0;       /* less vertical space on phones */
-  }
-
-  #hero h1 {
-    font-size: 28px;       /* smaller heading */
-  }
-
-  #hero .typewriter h2 {
-    font-size: 18px;       /* adjust subheading */
-  }
-
-  #hero p {
-    font-size: 14px;
+  .typewriter h2 {
+    white-space: normal;   /* allow wrapping */
+    width: 90%;            /* keep inside screen */
+    font-size: 18px;
+    line-height: 1.3;
   }
 }
