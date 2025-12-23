@@ -63,7 +63,7 @@ a:hover {
 
 /* Hero Section */
 #hero {
-    background-image: url('BG.jpg');  /* exact name & case */
+    background-image: url('BG.jpeg');  /* exact name & case */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -644,6 +644,8 @@ section:not(#hero) {
         margin-left: 12px;
     }
 }
+
+
 
 
 #hero::before {
