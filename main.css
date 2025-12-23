@@ -63,7 +63,7 @@ a:hover {
 
 /* Hero Section */
 #hero {
-    background-image: url('BG.jpeg');  /* exact name & case */
+    background-image: url('Background.jpg');  /* exact name & case */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -161,15 +161,6 @@ footer {
     text-align: center;
 }
 /* Hero Section */
-#hero {
-    background-image: url('BG.JPG'); /* Replace 'background.jpg' with your image file name */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #000; /* Fallback color in case the image doesn't load */
-    padding: 150px 0;
-    text-align: center;
-}
 
 section {
     padding: 80px 0;
@@ -645,9 +636,3 @@ section:not(#hero) {
     }
 }
 
-
-
-
-#hero::before {
-    background-color: rgba(0,0,0,0.5);  /* use rgba, not solid black */
-}
