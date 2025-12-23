@@ -236,35 +236,6 @@ section:not(#hero) {
     height: auto;
 }
 
-.skills {
-    margin-bottom: 2rem;
-}
-
-.skill {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.skill-name {
-    width: 170px;
-    font-weight: bold;
-}
-
-.skill-bar {
-    flex: 1;
-    height: 20px;
-    background-color: #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.skill-level {
-    height: 100%;
-    background-color: #4CAF50;
-    border-radius: 10px;
-}
-
 .resume-download {
     text-align: center;
     margin-top: 2rem;
@@ -390,42 +361,6 @@ section:not(#hero) {
     margin: 0;
 }
 
-
-.skills:hover {
-    transform: translateY(-8px);   /* move section up a bit */
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-}
-
-/* center skills section like education */
-.skills {
-    max-width: 1100px;
-    margin: 60px auto;          /* center horizontally + add top/bottom space */
-    padding: 24px 32px;
-}
-
-/* bigger, centered heading */
-.skills h3 {
-    text-align: center;
-    font-size: 2.2rem;          /* adjust until it matches "Education" */
-    margin-bottom: 24px;
-}
-
-/* groups stay left-aligned inside centered block */
-.skill-group {
-    margin-bottom: 18px;
-}
-
-.skill-group h4 {
-    font-size: 1rem;
-    margin-bottom: 8px;
-}
-
-/* tag layout (keep as before) */
-.skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
 
 .tag {
     display: inline-flex;
@@ -571,20 +506,6 @@ section:not(#hero) {
     margin-top: 2px;
 }
 
-#about, #education { background-color: #050505; }
-#experience, #projects { background-color: #060606; }
-.skills, #contact { background-color: #070707; }
-
-/* reduce vertical padding for the skills section wrapper */
-#skills {
-    padding: 40px 0;   /* instead of 80px 0 */
-}
-
-/* or, if you don't have <section id="skills">, target the container */
-.skills {
-    margin: 0px auto; /* smaller gap above/below */
-}
-
 .project-card,
 .education-item,
 #experience .col-md-8 p {
@@ -592,7 +513,9 @@ section:not(#hero) {
 }
 
 .project-card:hover,
-.education-item:hover,
+.education-item:hover{
+    color: #e26b0a;
+}
 #experience .col-md-8 p:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 24px rgba(0,0,0,0.6);
