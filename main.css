@@ -646,3 +646,6 @@ section:not(#hero) {
 }
 
 
+#hero::before {
+    background-color: rgba(0,0,0,0.5);  /* use rgba, not solid black */
+}
