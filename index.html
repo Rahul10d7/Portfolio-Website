@@ -7,6 +7,7 @@
     <title>Rahul Cheruku Portfolio</title>
     <meta name="description" content="Rahul Cheruku Portfolio">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico">
@@ -36,8 +37,10 @@
             <ul id="nav" class="nav">
                 <li class="current"><a class="smoothscroll" href="#hero">Home</a></li>
                 <li><a class="smoothscroll" href="#about">About</a></li>
-                <li><a class="smoothscroll" href="#experience">Experience</a></li>
                 <li><a class="smoothscroll" href="#education">Education</a></li>
+                <li><a class="smoothscroll" href="#projects">Projects</a></li>
+                <li><a class="smoothscroll" href="#skills">Skills</a></li>
+                <li><a class="smoothscroll" href="#experience">Experience</a></li>
                 <li><a class="smoothscroll" href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -75,17 +78,9 @@
                 <!-- Col -->
                 <div class="col-md-8">
                     
-                    <p>Hey there! I'm Rahul, a fourth-year Computer Systems Engineering student at 
-                        Carleton University. I've always been captivated by the ever-evolving world of 
-                        technology, which led me to pursue a path where I can delve deep into the heart 
-                        of computer systems. What sets me apart is my relentless pursuit of knowledge. 
-                        Whether it's unraveling the complexities of machine learning algorithms or delving
-                        into the intricacies of its architecture, I'm always eager to expand my understanding. 
-                        I thrive on the challenge of grasping new concepts and enjoy pushing the boundaries of my 
-                        expertise. Beyond the confines of the classroom, you'll often find me engaged in intense 
-                        pool table showdowns or exploring the great outdoors, finding inspiration in the balance 
-                        between strategy and spontaneity. With a blend of curiosity and determination, I approach 
-                        each day as an opportunity to grow and excel in my field.</p>
+                    <p>Hey! I’m Rahul. A Computer Systems Engineering grad from Carleton University and currently a Master’s student in Artificial Intelligence. I like building things where software meets intelligence, whether that’s working close to the system, experimenting with AI, or figuring out how complex ideas turn into real, working products. I’m naturally curious and always learning something new, usually by breaking things first and fixing them better the second time.
+
+                        When I’m not coding or studying, you’ll probably find me at a pool table plotting the perfect shot or outside clearing my head. I like balancing structure with creativity, and I bring that same mindset into everything I build - thoughtful, hands-on, and always aiming to improve.</p>
                 </div>
                 <!-- End Col -->
             </div>
@@ -94,6 +89,243 @@
         <!-- End Container -->
     </section>
     <!-- End About Section -->
+
+<!-- Portfolio Section -->
+    <section id="education">
+        <div class="container">
+            <div class="row">
+                <div class="education-wrapper">
+                    <div class="education-col">
+                        <h2 class="heading education-title">Education</h2>
+
+                        <div class="education-item">
+                            <img src="UT_Austin.jpg" alt="UT Austin" class="uni-logo">
+                            <div class="education-text">
+                                <h3 class="institution">The University of Texas at Austin</h3>
+                                <p class="degree">Master's in Artificial Intelligence (Online)</p>
+                                <p class="date">January 2026 - Present</p>
+                            </div>
+                        </div>
+
+                        <div class="education-item">
+                            <img src="CU.jpg" alt="Carleton University" class="uni-logo">
+                            <div class="education-text">
+                                <h3 class="institution">Carleton University</h3>
+                                <p class="degree">Systems and Computer Engineering</p>
+                                <p class="date">September 2020 - May 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Container -->
+
+    <!-- Projects Section -->
+    <section id="projects">
+  <div class="container">
+    <h2 class="heading">Projects</h2>
+
+    <ul class="project-list">
+      <!-- Facial Recognition Attendance System -->
+      <li data-project="facial-attendance">
+        <div class="project-line">
+          Facial Recognition Attendance System
+          <span class="project-tech">Python | OpenCV | Face_recognition</span>
+        </div>
+        <div id="facial-attendance" class="project-detail">
+          <p>
+            This project centered on building a camera-based attendance platform that automatically detects
+            and recognizes faces in real time and logs entries to structured CSV records for easy analysis.
+            Using Python with OpenCV and a facial-embedding pipeline, the system captures frames from a live
+            video stream, detects faces, and matches them against a pre-enrolled dataset to identify students
+            or employees. Attendance events are appended to a date-specific CSV file with names and timestamps.
+            Robust preprocessing, confidence-threshold tuning, and duplicate-detection logic significantly
+            reduced false positives and ensured reliable recognition performance across different lighting
+            conditions and viewing angles.
+          </p>
+        </div>
+      </li>
+      
+      <!-- Intelligent Autonomous Vehicle Control System -->
+      <li data-project="autonomous-vehicle">
+        <div class="project-line">
+          Intelligent Autonomous Vehicle Control System
+          <span class="project-tech">C | C++ | STM32 | Arduino | Raspberry Pi | ROS | Linux | CAN Bus | I2C | SPI | PWM | Oscilloscope Debugging</span>
+        </div>
+        <div id="autonomous-vehicle" class="project-detail">
+          <p>
+            This project focused on building a robust safety layer for an autonomous vehicle, with an emphasis
+            on manual override and fault tolerance. I developed an RC override system integrating STM32, Arduino,
+            and Raspberry Pi platforms, using I2C, CAN Bus, SPI, and PWM control to ensure smooth transitions
+            between autonomous and manual modes. The embedded software was written in C/C++ on a Linux environment
+            and integrated with ROS for orchestration, diagnostics, and system monitoring. Extensive hardware
+            debugging with oscilloscopes and signal multiplexing techniques significantly improved communication
+            reliability, reduced latency, and increased overall system stability, resulting in a highly responsive
+            and dependable fail-safe control system.
+          </p>
+        </div>
+      </li>
+
+      <!-- Optimized Full-Stack Web Platform with Caching -->
+      <li data-project="fullstack-caching">
+        <div class="project-line">
+          Optimized Full-Stack Web Platform with Caching
+          <span class="project-tech">HTML | CSS | JavaScript | React | PHP | SQL | Apache | XAMPP | Git</span>
+        </div>
+        <div id="fullstack-caching" class="project-detail">
+          <p>
+            I designed and built a secure, scalable full-stack web application using HTML, CSS, JavaScript, React,
+            PHP, and SQL, deployed on an Apache/XAMPP server. The platform included user authentication, structured
+            data storage, and dynamic content generation. A major focus of the project was performance optimization,
+            where I implemented server-side caching strategies and backend optimizations to significantly reduce
+            page load times under high-traffic conditions. The project followed Agile development practices, with Git
+            used for version control, collaborative workflows, and iterative feature delivery.
+          </p>
+        </div>
+      </li>
+
+      <!-- High-Speed FPGA Cache Memory Architecture -->
+      <li data-project="fpga-cache">
+        <div class="project-line">
+          High-Speed FPGA Cache Memory Architecture
+          <span class="project-tech">Verilog | VHDL | C | Zynq-7000 FPGA | Vivado | Hardware Simulation | Debugging</span>
+        </div>
+        <div id="fpga-cache" class="project-detail">
+          <p>
+            This project involved designing a custom cache memory architecture on a Zynq-7000 FPGA to improve data
+            access efficiency in high-speed processing systems. Using Verilog, VHDL, and C, I implemented multiple
+            caching strategies, including Least Recently Used (LRU) and direct-mapped caches, to optimize memory
+            hierarchy performance. Vivado was used extensively for synthesis, simulation, and hardware debugging,
+            allowing detailed performance analysis and bottleneck identification. Through targeted hardware-level
+            optimizations, the system achieved significant gains in data retrieval speed and processing throughput.
+          </p>
+        </div>
+      </li>
+
+      <!-- Embedded Autonomous Snow Plough Control System -->
+      <li data-project="snow-plough">
+        <div class="project-line">
+          Embedded Autonomous Snow Plough Control System
+          <span class="project-tech">Embedded C | RTOS | Sensors | Motor Drivers | Serial Communication | LTSpice</span>
+        </div>
+        <div id="snow-plough" class="project-detail">
+          <p>
+            As the project lead, I oversaw the complete hardware-software co-design of an autonomous snow plough system.
+            The system was built using Embedded C and integrated sensors, motor drivers, and an RTOS to support real-time
+            obstacle detection and task scheduling. I implemented serial communication protocols for reliable real-time
+            data transfer and contributed to an intelligent path-planning approach based on dataset analysis for predictive
+            navigation. Electrical components and circuit behavior were extensively simulated using LTSpice, followed by
+            coordinated hardware integration and testing to validate system reliability.
+          </p>
+        </div>
+      </li>
+
+      <!-- IoT Remote Monitoring and Control System -->
+      <li data-project="iot-remote">
+        <div class="project-line">
+          IoT Remote Monitoring and Control System
+          <span class="project-tech">Arduino | Raspberry Pi | Python | PHP | SQL | React | Kotlin | OpenCV | APIs | I2C | Serial Communication</span>
+        </div>
+        <div id="iot-remote" class="project-detail">
+          <p>
+            This project centered on building an end-to-end IoT monitoring solution using Arduino and Raspberry Pi for
+            real-time data acquisition via I2C and serial communication. I developed a web-based dashboard using PHP, SQL,
+            React, and API integrations to visualize sensor data and system status. In parallel, I built a Kotlin-based
+            mobile application leveraging OpenCV for real-time image processing, enabling remote monitoring and control.
+            Backend data processing and analytics were implemented in Python, improving alerting mechanisms, response
+            times, and overall system uptime through efficient power management and signal multiplexing.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+
+    <!-- Skills Section -->
+    <div class="skills">
+            <h3 class="heading">Skills</h3>
+            <div class="skill-group">
+                <h4>Programming & Software</h4>
+                <div class="skill-tags">
+                <span class="tag">C</span>
+                <span class="tag">C++</span>
+                <span class="tag">Python</span>
+                <span class="tag">Java</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">PHP</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Verilog</span>
+                <span class="tag">VHDL</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">React</span>
+                <span class="tag">APIs</span>
+                <span class="tag">Embedded systems</span>
+                <span class="tag">RTOS</span>
+                <span class="tag">PID control</span>
+                <span class="tag">I²C & serial</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Agile</span>
+                <span class="tag">Git</span>
+                <span class="tag">Unit testing</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <h4>Embedded & Hardware</h4>
+                <div class="skill-tags">
+                <span class="tag">Arduino</span>
+                <span class="tag">Raspberry Pi</span>
+                <span class="tag">Zynq-7000 FPGA</span>
+                <span class="tag">FS-i6X</span>
+                <span class="tag">Digital design</span>
+                <span class="tag">Processor architecture</span>
+                <span class="tag">Sensor integration</span>
+                <span class="tag">Motor control</span>
+                <span class="tag">Signal multiplexing</span>
+                <span class="tag">IoT security</span>
+                <span class="tag">Remote monitoring</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <h4>Cloud, Systems & Engineering</h4>
+                <div class="skill-tags">
+                <span class="tag">AWS</span>
+                <span class="tag">SQL optimization</span>
+                <span class="tag">Data storage</span>
+                <span class="tag">Apache</span>
+                <span class="tag">XAMPP</span>
+                <span class="tag">Server optimization</span>
+                <span class="tag">Caching</span>
+                <span class="tag">Circuit simulation</span>
+                <span class="tag">Power distribution</span>
+                <span class="tag">Infrastructure planning</span>
+                <span class="tag">Standards compliance</span>
+                <span class="tag">Risk assessment</span>
+                <span class="tag">System reliability</span>
+                <span class="tag">Project management</span>
+                <span class="tag">Cross‑functional collaboration</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <h4>Testing & Optimization</h4>
+                <div class="skill-tags">
+                <span class="tag">HW/SW validation</span>
+                <span class="tag">Debugging</span>
+                <span class="tag">Performance tuning</span>
+                <span class="tag">ATE data analysis</span>
+                <span class="tag">Yield improvement</span>
+                </div>
+            </div>
+            </div>
+
+    <!-- End Portfolio Section -->
 
     <!-- Resume Section -->
     <section id="experience">
@@ -109,8 +341,8 @@
 
                 <!-- Col -->
                 <div class="col-md-8">
-                    <p>1. Design and CAD Tech @Planview Utility Services</p> 
-                    <p>2. Standards Co-op @Hydro Ottawa</p> 
+                    <p>1. Infrastructure Design Technician @Planview Utility Services</p> 
+                    <p>2. Technical Standards Engineer @Hydro Ottawa</p> 
                 </div>
                 <!-- End Col -->
             </div>
@@ -118,99 +350,12 @@
         </div>
         <!-- End Container -->
         <div class="resume-download">
-            <a href="Personal/Portfolio Website/Rahul Cheruku Resume.pdf" download>
+            <a href="RahulCheruku_Resume.pdf" download>
                 <button class="download-btn">Download Resume</button>
             </a>
         </div>        
     </section>
     <!-- End Resume Section -->
-
-    <!-- Portfolio Section -->
-    <section id="education">
-        <!-- Container -->
-    <div class="container">
-        <!-- Row -->
-        <div class="row">
-            <!-- Col -->
-            <div class="col-md-4">
-                <h2 class="heading">Education</h2>
-            </div>
-            <!-- End Col -->
-            
-            <!-- Col -->
-            <div class="col-md-8">
-                <div class="education-item">
-                    <h3 class="institution">Carleton University</h3>
-                    <p class="degree">Systems and Computer Engineering</p>
-                    <p class="date">September 2020 - Present</p>
-                </div>
-                <!-- You can add more education items here -->
-                
-            </div>
-            <!-- End Col -->
-        </div>
-        <!-- End Row -->
-    </div>
-    <!-- End Container -->
-        <div class="skills">
-            <br><h3>Skills</h3>
-            <div class="skill">
-                <div class="skill-name">SPIDA CALC</div>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 90%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="skill-name">SEPARATION CALCS</div>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 100%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="skill-name">UTILITY DESIGN PACKAGES</div>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 90%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="skill-name">CSS</div>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 35%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="skill-name">JavaScript</div>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 25%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="skill-name">HTML</div>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 60%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="skill-name">VHDL</div>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 70%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="skill-name">PYTHON</div>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 80%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="skill-name">C</div>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 65%;"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Portfolio Section -->
 
     <!-- Contact Section -->
     <section id="contact">
@@ -227,8 +372,11 @@
                 <!-- Col -->
                 <div class="col-md-8">
                     <p>Feel free to get in touch with me.</p>
-                     Phone: +1(613)-299-2554
-                <br> Email: <a href="mailto:rahulcheruku10d7@gmail.com">rahulcheruku10d7@gmail.com</a> 
+                    <div><i class="fas fa-phone"></i> +1(613)-299-2554</div>
+                    <div><i class="fas fa-envelope"></i> <a href="mailto:rahulcheruku10d7@gmail.com">rahulcheruku10d7@gmail.com</a></div>
+                    <div><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/rahul-cheruku-25b2b6209/" target="_blank" rel="noopener noreferrer">Linkedin</a></div>
+                    <div><i class="fab fa-github"></i> <a href="https://github.com/Rahul10d7?tab=repositories" target="_blank" rel="noopener noreferrer">Github</a></div>
+                </div>
                 </div>
                 <!-- End Col -->
             </div>

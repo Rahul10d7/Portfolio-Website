@@ -19,7 +19,7 @@ $(function() {
     });
 });
 
-// Get the typewriter element
+// Typewriter
 const typewriter = document.querySelector('.typewriter h2');
 
 // Add the text content to the typewriter element
@@ -38,4 +38,28 @@ const cursor = document.createElement('span');
 cursor.className = 'cursor';
 cursor.textContent = '';
 typewriter.appendChild(cursor);
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const listItems = document.querySelectorAll('.project-list li');
+
+    if (!listItems.length) return;
+
+    listItems.forEach(li => {
+        li.addEventListener('click', () => {
+            const detail = li.querySelector('.project-detail');
+
+            // toggle only this project's detail
+            const isActive = detail.classList.contains('active');
+            // close all
+            document.querySelectorAll('.project-detail').forEach(d => d.classList.remove('active'));
+            listItems.forEach(item => item.classList.remove('active'));
+
+            if (!isActive) {
+                li.classList.add('active');
+                detail.classList.add('active');
+            }
+        });
+    });
+});
 

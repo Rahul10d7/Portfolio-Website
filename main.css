@@ -23,7 +23,7 @@ a:hover {
 #header {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -41,11 +41,11 @@ a:hover {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 #nav li {
-    margin-left: 20px;
+    margin-left: 0;
 }
 
 #nav li a {
@@ -58,7 +58,7 @@ a:hover {
 }
 
 #nav li a:hover {
-    color: #666;
+    color: #e26b0a;
 }
 
 /* Hero Section */
@@ -334,31 +334,311 @@ section:not(#hero) {
     text-align: center;
 }
 
+.col-md-8 div {
+    margin-bottom: 8px;
+}
+.col-md-8 i {
+    margin-right: 8px;
+    color: #0077b5; /* LinkedIn blue */
+}
+
+/* Wrapper centers the whole education block */
+.education-wrapper {
+    display: flex;
+    justify-content: center;   /* center horizontally */
+    width: 100%;
+}
+
+/* Column width & centering */
+.education-col {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;            /* center the column */
+    text-align: left;          /* keep text left-aligned inside */
+}
+
+/* Heading centered above items */
+.education-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* One full-width row per education entry */
 .education-item {
+    display: flex;             /* NOT inline-flex */
+    align-items: flex-start;
     margin-bottom: 20px;
 }
 
-.education-item .institution {
-    font-size: 1.2em; /* Adjust the size as needed */
-    margin-bottom: 5px;
+/* Logo */
+.uni-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    border-radius: 4px;
 }
 
-.education-item .degree {
-    font-size: 0.85em; /* Reduced size for degree */
-    margin-bottom: 5px;
+/* Text stack: name, degree, dates */
+.education-text {
+    display: flex;
+    flex-direction: column;
 }
 
-.education-item .date {
-    font-size: 0.75em; /* Further reduced size for date */
-    color: #888;
-    font-style: italic;
+/* Institution heading spacing */
+.institution,
+.education-text .institution {
+    margin: 0 0 4px 0;
 }
 
-#education{
+.education-text .degree,
+.education-text .date {
+    margin: 0;
+}
+
+.skills {
+    max-width: 1100px;              /* optional: control width */
+    margin: 0 auto;                /* center section */
+    padding: 20px 0;
+    transition: transform 0.25s ease, 
+                box-shadow 0.25s ease;
+}
+
+.skills:hover {
+    transform: translateY(-8px);   /* move section up a bit */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* center skills section like education */
+.skills {
+    max-width: 1020px;
+    margin: 60px auto;          /* center horizontally + add top/bottom space */
+    padding: 24px 32px;
+}
+
+/* bigger, centered heading */
+.skills h3 {
+    text-align: center;
+    font-size: 2.2rem;          /* adjust until it matches "Education" */
+    margin-bottom: 24px;
+}
+
+/* groups stay left-aligned inside centered block */
+.skill-group {
+    margin-bottom: 18px;
+}
+
+.skill-group h4 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+/* tag layout (keep as before) */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.3);
+    font-size: 0.9rem;
+    white-space: nowrap;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tag:hover {
+    background: rgba(255,255,255,0.12);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    color: #e26b0a;
+}
+
+/* make the whole projects block centered */
+#projects .container {
     text-align: center;
 }
 
+/* remove left bullet alignment */
+.project-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 auto;
+    max-width: 800px; /* control width */
+}
+
+/* each project item stacked & centered */
+.project-list li {
+    cursor: pointer;
+    margin-bottom: 16px;
+}
+
+/* name + tech stacked, centered */
+.project-line {
+    position: relative;
+    padding-left: 22px;           /* space for the tick */
+    display: inline-block;        /* so inner spans can stack nicely */
+    text-align: center;
+}
+
+/* orange tick before each project name */
+.project-line::before {
+    content: "✔";                 /* tick character */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #e26b0a;               /* your accent orange */
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+
+.project-tech {
+    display: block;               /* <--- forces line break */
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 4px;
+}
 
 
+/* description directly under, centered */
+.project-detail {
+    display: none;
+    margin-top: 8px;
+    font-size: 0.9rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.project-detail.active {
+    display: block;
+}
+
+/* make clicked project stand out slightly */
+.project-list li.active .project-line {
+    font-weight: bold;
+}
+
+.project-line:hover {
+    color: #e26b0a;
+}
+
+section:not(#hero) {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.heading {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.heading::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    margin: 10px auto 0;
+    background: #e26b0a; /* your accent */
+}
+
+.project-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* center everything horizontally */
+    gap: 2px;
+}
+
+/* top row: tick + name */
+.project-name {
+    display: inline-block;
+    font-weight: inherit;
+}
+
+/* orange tick right before the name */
+.project-tick {
+    color: #e26b0a;
+    margin-right: 6px;
+    font-size: 0.9rem;
+}
+
+/* name + tick on one line, tech below */
+.project-line {
+    text-align: center;
+}
+
+.project-line > .project-name,
+.project-line > .project-tick {
+    display: inline-block;
+}
+
+.project-tech {
+    display: block;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 2px;
+}
+
+#about, #education { background-color: #050505; }
+#experience, #projects { background-color: #060606; }
+.skills, #contact { background-color: #070707; }
+
+/* reduce vertical padding for the skills section wrapper */
+#skills {
+    padding: 40px 0;   /* instead of 80px 0 */
+}
+
+/* or, if you don't have <section id="skills">, target the container */
+.skills {
+    margin: 0px auto; /* smaller gap above/below */
+}
+
+.project-card,
+.education-item,
+#experience .col-md-8 p {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover,
+.education-item:hover,
+#experience .col-md-8 p:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.6);
+}
+
+.heading::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    margin: 10px auto 0;
+    background: #e26b0a;
+    transform-origin: center;
+    transform: scaleX(1);
+    transition: transform 0.3s ease;
+}
+
+.heading:hover::after {
+    transform: scaleX(1.3);
+}
+
+@media (max-width: 768px) {
+    #nav-wrap {
+        justify-content: flex-end;   /* everything to the right */
+    }
+
+    #nav {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    #nav li {
+        margin-left: 12px;
+    }
+}
 
 
