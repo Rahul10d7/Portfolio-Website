@@ -128,6 +128,27 @@
     <h2 class="heading">Projects</h2>
 
     <ul class="project-list">
+      <!-- Free AI Meal Planner -->
+
+      <li data-project="ai-meal-planner">
+        <div class="project-line">
+          Free AI Meal Planner
+          <span class="project-tech">Python | Streamlit | Ollama (Llama 3.2)</span>
+        </div>
+        <div id="ai-meal-planner" class="project-detail">
+          <p>
+            This project is a recipe-generation web app that turns leftover fridge ingredients into complete meal ideas
+            using a locally running large language model. Built with Python and Streamlit, the interface lets users enter
+            a comma-separated list of ingredients, then sends a structured prompt to an Ollama-hosted Llama 3.2 model
+            running on the user's machine. The model returns a fully formatted recipe, including a title, prep and cook
+            time, ingredient list, and step-by-step instructions. The app adds error handling for connectivity and timeout
+            issues, ensures that every user-provided ingredient is explicitly used in the generated recipe, and presents
+            the output in a clean, scrollable UI. Because all inference happens locally through Ollama, the planner
+            requires no API keys, incurs no usage costs, and keeps all user data on-device.
+          </p>
+        </div>
+      </li>
+      
       <!-- Facial Recognition Attendance System -->
       <li data-project="facial-attendance">
         <div class="project-line">
